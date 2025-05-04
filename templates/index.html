@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sentiment App</title></head>
+<body>
+  <form method="post">
+    <textarea name="text" rows="5" cols="50" placeholder="Enter text..."></textarea><br>
+    <input type="submit" value="Analyze Sentiment">
+  </form>
+  <h2>
+
+    <p>
+      Sentiment: {{ sentiment }}
+      {% if sentiment == 'POSITIVE' %}
+        😊
+      {% elif sentiment == 'NEGATIVE' %}
+        😞
+      {% elif sentiment == 'NEUTRAL' %}
+        😐
+      {% elif sentiment == 'MIXED' %}
+        😕
+      {% else %}
+        ❓
+      {% endif %}
+    </p>
+
+  </h2>
+  <h1>This is for AD class Assignment</h1>
+</body>
+</html>
